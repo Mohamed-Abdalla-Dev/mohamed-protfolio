@@ -97,7 +97,7 @@ function Hero() {
           <div className="relative">
             <div className="absolute inset-0 bg-linear-to-r from-blue-500 to-purple-500 rounded-full filter blur-2xl opacity-20 animate-pulse" />
             <img
-              src="/public/img/9988.png"
+              src="/img/9988.png"
               alt={personalInfo.name}
               className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-blue-500 shadow-2xl relative z-10"
             />

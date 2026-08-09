@@ -34,7 +34,7 @@ function About() {
               <div className="absolute -inset-4 bg-linear-to-r from-blue-500 to-purple-500 rounded-2xl blur-2xl opacity-20 animate-pulse" />
               <div className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-2xl overflow-hidden border-2 border-blue-500/30 shadow-2xl">
                 <img
-                  src="/public/img/1000125101.jpg"
+                  src="/img/1000125101.jpg"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
@@ -54,9 +54,6 @@ function About() {
           >
             <h3 className="text-2xl md:text-3xl font-bold">
               A bit about who I am{" "}
-              {/* <span className="bg-linear-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                Mohamed Abdalla
-              </span> */}
             </h3>
             <p className="text-gray-300 text-lg leading-relaxed">
               I'm a Front-End Developer specializing in React, passionate about
