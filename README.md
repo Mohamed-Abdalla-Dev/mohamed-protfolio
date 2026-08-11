@@ -1,15 +1,15 @@
 # Mohamed Portfolio
 
-A modern, responsive portfolio website built with React, Vite, Tailwind CSS, and Framer Motion. The project showcases personal information, services, skills, a curated projects gallery, and a contact form powered by EmailJS.
+A simple, modern portfolio website built with React, Vite, Tailwind CSS, and Framer Motion. The design focuses on clarity, calm colors, and a humble presentation that reflects a developer who values clean work and thoughtful user experiences.
 
 ## Features
 
-- Modern landing page with animated sections
-- About, Services, Skills, and Projects sections
-- Full projects page with category filters
-- Responsive design for desktop and mobile
+- Clean and minimal landing page
+- About, services, skills, projects, and contact sections
+- Responsive layout for desktop and mobile
+- Smooth animations and polished transitions
 - Contact form integration with EmailJS
-- Smooth transitions and motion effects
+- Projects page with category filters
 
 ## Tech Stack
 
@@ -78,8 +78,6 @@ VITE_EMAILJS_PUBLIC_KEY=your_public_key
 npm run dev
 ```
 
-Then open the local URL shown by Vite in your browser.
-
 ## Available Scripts
 
 - `npm run dev` — start the development server
@@ -97,15 +95,13 @@ For a production build:
 npm run build
 ```
 
-Then deploy the contents of the `dist` folder.
-
 ## Customization
 
-You can update your personal details, projects, skills, and social links in:
+You can update your personal details, projects, and content in:
 
 - `src/data/portfolioData.js`
-- `src/components/` for layout and sections
+- `src/components/` for layout and section content
 
 ## License
 
-This project is intended for personal or portfolio use.
+This project is intended for personal portfolio use.

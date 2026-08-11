@@ -1,14 +1,14 @@
 export const personalInfo = {
-  name: " Mohamed",
-  bio: " I design and build digital products that people love to use — fast, clean, and accessible.",
+  name: "Mohamed Abdalla",
+  bio: "I build polished, fast, and user-friendly web experiences for startups, brands, and modern businesses.",
   email: "mohamadabdalla6818@gmail.com",
   phone: "+218 93-0226395",
   location: "Benghazi, Libya",
 };
 
 export const stats = [
-  { number: "20+", label: "Completed Projects" },
-  { number: "10", label: "Years of Experience" },
+  { number: "15+", label: "Projects shipped" },
+  { number: "1+", label: "Years of experience" },
 ];
 
 export const services = [
@@ -39,17 +39,6 @@ export const services = [
 ];
 
 export const projects = [
-  {
-    title: "Kasper Landing Page",
-    description:
-      "kasper landing page project from Elzero Web School - Pure HTML & CSS",
-    tech: ["Html", "CSS"],
-    category: "html-css",
-    image: "img/Project/kasper.png",
-    github:
-      "https://github.com/Mohamed-Abdalla-Dev/kasper-landing-page-html-css",
-    link: "https://mohamed-abdalla-dev.github.io/kasper-landing-page-html-css/",
-  },
   {
     title: "Special Design",
     description:
@@ -83,6 +72,33 @@ export const projects = [
     link: " https://to-do-list-app-redux-toolkit.oxgen.workers.dev",
   },
   {
+    title: "Movies Watchlist App",
+    description:
+      "A dynamic React Movies App powered by OMDb API, featuring global state context, custom watchlist tracking, and local storage auto-save.",
+    tech: [
+      "React.js",
+      "React Context API",
+      "React Router",
+      "OMDb API",
+      "Vanilla CSS",
+    ],
+    category: "react.js",
+    image: "img/Project/movis-app.png",
+    github: "https://github.com/Mohamed-Abdalla-Dev/-Movies-Watchlist-App",
+    link: "https://bright-salamander-924321.netlify.app",
+  },
+  {
+    title: "React Authentication With Supabase",
+    description:
+      "A full-stack React authentication system integrated with Supabase Auth, featuring secure login, signup, and session tracking.",
+    tech: ["React.js", "React bootstrap", "React Router", "Supabase"],
+    category: "react.js",
+    image: "img/Project/react-auth.png",
+    github:
+      "https://github.com/Mohamed-Abdalla-Dev/React-Authentication-with-Supabase",
+    link: "https://incandescent-vacherin-687337.netlify.app",
+  },
+  {
     title: "Fylo Shop Full Stack Store ",
     description:
       "A fully responsive Full-Stack Fylo Shop built with React 19, Vite, and Redux Toolkit. Integrated with Supabase (PostgreSQL) for secure user authentication, product management, and order tracking.",
@@ -100,15 +116,15 @@ export const projects = [
     link: " https://fylo-shop-full-stack-store.oxgen.workers.dev",
   },
   {
-    title: "React Authentication With Supabase",
+    title: "Kasper Landing Page",
     description:
-      "A full-stack React authentication system integrated with Supabase Auth, featuring secure login, signup, and session tracking.",
-    tech: ["React.js", "React bootstrap", "React Router", "Supabase"],
-    category: "react.js",
-    image: "img/Project/react-auth.png",
+      "kasper landing page project from Elzero Web School - Pure HTML & CSS",
+    tech: ["Html", "CSS"],
+    category: "html-css",
+    image: "img/Project/kasper.png",
     github:
-      "https://github.com/Mohamed-Abdalla-Dev/React-Authentication-with-Supabase",
-    link: "https://incandescent-vacherin-687337.netlify.app",
+      "https://github.com/Mohamed-Abdalla-Dev/kasper-landing-page-html-css",
+    link: "https://mohamed-abdalla-dev.github.io/kasper-landing-page-html-css/",
   },
   {
     title: "Testimonials Grid Section",
@@ -324,22 +340,6 @@ export const projects = [
     image: "img/Project/shoping-cart.png",
     github: "https://github.com/Mohamed-Abdalla-Dev/Shopping-Cart-With-React",
     link: "https://resilient-mooncake-0de305.netlify.app",
-  },
-  {
-    title: "Movies Watchlist App",
-    description:
-      "A dynamic React Movies App powered by OMDb API, featuring global state context, custom watchlist tracking, and local storage auto-save.",
-    tech: [
-      "React.js",
-      "React Context API",
-      "React Router",
-      "OMDb API",
-      "Vanilla CSS",
-    ],
-    category: "react.js",
-    image: "img/Project/movis-app.png",
-    github: "https://github.com/Mohamed-Abdalla-Dev/-Movies-Watchlist-App",
-    link: "https://bright-salamander-924321.netlify.app",
   },
   {
     title: "Sweet Shop Redux Toolkit",

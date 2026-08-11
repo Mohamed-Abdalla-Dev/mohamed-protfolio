@@ -3,28 +3,28 @@ import { FaLaptopCode, FaMobileAlt, FaBolt, FaWrench } from "react-icons/fa";
 
 const services = [
   {
-    icon: <FaLaptopCode className="text-blue-500" />,
+    icon: <FaLaptopCode className="text-cyan-400" />,
     title: "Website Development",
     desc: "I build fast, responsive websites using React and Tailwind CSS.",
-    features: ["React.js", "Tailwind CSS"],
+    features: ["React", "Tailwind"],
   },
   {
-    icon: <FaMobileAlt className="text-blue-500" />,
+    icon: <FaMobileAlt className="text-cyan-400" />,
     title: "Responsive Design",
-    desc: "Designs that work perfectly on all devices and screen sizes",
-    features: ["Mobile First", "Responsive", "Cross-browser"],
+    desc: "Layouts that feel comfortable on phones, tablets, and desktops.",
+    features: ["Mobile-first", "Flexible UI"],
   },
   {
-    icon: <FaBolt className="text-blue-500" />,
-    title: "Performance Optimization",
-    desc: "I improve website performance to increase loading speed and user experience",
-    features: ["Lazy Loading", "Code Splitting", "Optimization"],
+    icon: <FaBolt className="text-cyan-400" />,
+    title: "Performance Improvement",
+    desc: "I focus on speed and clarity so pages feel light and smooth.",
+    features: ["Fast loading", "Clean code"],
   },
   {
-    icon: <FaWrench className="text-blue-500" />,
-    title: "Maintenance and Updates",
-    desc: "I provide ongoing support and regular updates for your website",
-    features: ["Maintenance", "Updates", "Support"],
+    icon: <FaWrench className="text-cyan-400" />,
+    title: "Support & Updates",
+    desc: "I help keep projects running well after launch with simple updates.",
+    features: ["Maintenance", "Support"],
   },
 ];
 
@@ -37,39 +37,39 @@ function Services() {
         viewport={{ once: true }}
         className="text-center mb-12"
       >
-        <h2 className="text-4xl font-bold mb-4">
-          My{" "}
-          <span className="bg-linear-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            Services
-          </span>
+        <h2 className="text-4xl font-semibold mb-4 text-white">
+          My <span className="text-cyan-400">Services</span>
         </h2>
-        <div className="w-24 h-1 bg-linear-to-r from-blue-500 to-purple-500 mx-auto rounded-full" />
-        <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
-          What do I offer my clients?
+        <div className="w-24 h-1 bg-cyan-500 mx-auto rounded-full" />
+        <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
+          Practical support for startups, founders, and small businesses.
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid gap-5 md:grid-cols-2">
         {services.map((service, idx) => (
           <motion.div
             key={idx}
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: idx * 0.1 }}
-            whileHover={{ y: -10 }}
+            transition={{ delay: idx * 0.06 }}
             viewport={{ once: true }}
-            className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700 hover:border-blue-500 transition group"
+            className="rounded-2xl border border-slate-800 bg-slate-900/70 p-6"
           >
-            <div className="text-5xl mb-4 group-hover:scale-110 transition">
-              {service.icon}
+            <div className="mb-4 flex items-center gap-3">
+              <div className="text-2xl">{service.icon}</div>
+              <h3 className="text-lg font-semibold text-white">
+                {service.title}
+              </h3>
             </div>
-            <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-            <p className="text-gray-400 text-sm mb-4">{service.desc}</p>
+            <p className="mb-4 text-sm leading-relaxed text-slate-400">
+              {service.desc}
+            </p>
             <div className="flex flex-wrap gap-2">
               {service.features.map((feature, i) => (
                 <span
                   key={i}
-                  className="text-xs bg-gray-700 px-2 py-1 rounded-full"
+                  className="rounded-full border border-slate-700 bg-slate-800 px-2 py-1 text-xs text-slate-300"
                 >
                   {feature}
                 </span>

@@ -13,14 +13,13 @@ function Projects() {
         viewport={{ once: true }}
         className="text-center mb-12"
       >
-        <h2 className="text-4xl font-bold mb-4">
-          Selected{" "}
-          <span className="bg-linear-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            Work
-          </span>
+        <h2 className="text-4xl font-semibold mb-4 text-white">
+          Selected <span className="text-cyan-400">Work</span>
         </h2>
-        <div className="w-24 h-1 bg-linear-to-r from-blue-500 to-purple-500 mx-auto rounded-full" />
-        <p className="text-gray-400 mt-4">Examples of my previous work</p>
+        <div className="w-24 h-1 bg-cyan-500 mx-auto rounded-full" />
+        <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
+          A few recent builds that reflect a practical, modern approach.
+        </p>
       </motion.div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -33,10 +32,10 @@ function Projects() {
       <div className="flex justify-center mt-12">
         <Link
           to="/projects"
-          className="px-8 py-3 bg-linear-to-r from-blue-600 to-purple-600 rounded-full font-semibold hover:scale-105 transition shadow-lg shadow-blue-500/25 flex items-center gap-2"
+          className="inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 px-6 py-3 font-medium text-cyan-300 transition hover:bg-cyan-500/20"
         >
-          All Projects{" "}
-          <FiArrowRight className="inline-block ml-1 text-white animate-bounce" />
+          See all projects
+          <FiArrowRight className="text-base" />
         </Link>
       </div>
     </section>

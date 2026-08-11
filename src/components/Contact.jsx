@@ -1,9 +1,8 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { FaEnvelope, FaWhatsapp, FaMapMarkerAlt } from "react-icons/fa";
 import { personalInfo } from "../data/portfolioData";
-import { useState } from "react";
 
 function Contact() {
   const form = useRef();
@@ -39,7 +38,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 px-4 sm:px-6 bg-gray-900/50 overflow-hidden"
+      className="py-20 px-4 sm:px-6 bg-slate-900/40 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto">
         <motion.div
@@ -48,51 +47,57 @@ function Contact() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Contact{" "}
-            <span className="bg-linear-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-              Me
-            </span>
+          <h2 className="text-4xl md:text-5xl font-semibold mb-4 text-white">
+            Contact <span className="text-cyan-400">Me</span>
           </h2>
-          <div className="w-24 h-1 bg-linear-to-r from-blue-500 to-purple-500 mx-auto rounded-full" />
-          <p className="text-gray-400 mt-4">
-            Do you have a project? I'm here to help you
+          <div className="w-24 h-1 bg-cyan-500 mx-auto rounded-full" />
+          <p className="text-slate-400 mt-4">
+            If you need a website or want to discuss a project, I’d love to hear
+            from you.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 justify-center items-start">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-            <div className="flex items-center gap-4 p-4 bg-gray-800 rounded-xl border border-gray-700 hover:border-blue-500 transition">
-              <div className="p-3 bg-blue-500/20 rounded-full">
-                <FaEnvelope className="text-blue-400 text-xl" />
+            <h3 className="text-2xl font-semibold mb-6 text-white">
+              Contact Information
+            </h3>
+            <div className="flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
+              <div className="rounded-full bg-cyan-500/10 p-3">
+                <FaEnvelope className="text-cyan-400 text-xl" />
               </div>
               <div>
-                <p className="text-gray-500 text-sm">Email</p>
-                <p className="font-medium">{personalInfo.email}</p>
+                <p className="text-sm text-slate-500">Email</p>
+                <p className="font-medium text-slate-200">
+                  {personalInfo.email}
+                </p>
               </div>
             </div>
-            <div className="flex items-center gap-4 p-4 bg-gray-800 rounded-xl border border-gray-700 hover:border-blue-500 transition">
-              <div className="p-3 bg-blue-500/20 rounded-full">
-                <FaWhatsapp className="text-blue-400 text-xl" />
+            <div className="flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
+              <div className="rounded-full bg-cyan-500/10 p-3">
+                <FaWhatsapp className="text-cyan-400 text-xl" />
               </div>
               <div>
-                <p className="text-gray-500 text-sm">WhatsApp Number</p>
-                <p className="font-medium">{personalInfo.phone}</p>
+                <p className="text-sm text-slate-500">WhatsApp</p>
+                <p className="font-medium text-slate-200">
+                  {personalInfo.phone}
+                </p>
               </div>
             </div>
-            <div className="flex items-center gap-4 p-4 bg-gray-800 rounded-xl border border-gray-700 hover:border-blue-500 transition">
-              <div className="p-3 bg-blue-500/20 rounded-full">
-                <FaMapMarkerAlt className="text-blue-400 text-xl" />
+            <div className="flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
+              <div className="rounded-full bg-cyan-500/10 p-3">
+                <FaMapMarkerAlt className="text-cyan-400 text-xl" />
               </div>
               <div>
-                <p className="text-gray-500 text-sm">Location</p>
-                <p className="font-medium">{personalInfo.location}</p>
+                <p className="text-sm text-slate-500">Location</p>
+                <p className="font-medium text-slate-200">
+                  {personalInfo.location}
+                </p>
               </div>
             </div>
           </motion.div>
@@ -100,38 +105,40 @@ function Contact() {
           <motion.form
             ref={form}
             onSubmit={sendEmail}
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <h3 className="text-2xl font-bold mb-6">Send me a message</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-white">
+              Send a message
+            </h3>
             <input
               type="text"
               name="name"
               placeholder="Full Name"
-              className="w-full px-4 py-3 bg-gray-800 rounded-xl border border-gray-700 focus:border-blue-500 outline-none transition"
+              className="w-full rounded-2xl border border-slate-800 bg-slate-900/70 px-4 py-3 text-slate-200 outline-none transition focus:border-cyan-500"
               required
             />
             <input
               type="email"
               name="email"
               placeholder="Email Address"
-              className="w-full px-4 py-3 bg-gray-800 rounded-xl border border-gray-700 focus:border-blue-500 outline-none transition"
+              className="w-full rounded-2xl border border-slate-800 bg-slate-900/70 px-4 py-3 text-slate-200 outline-none transition focus:border-cyan-500"
               required
             />
             <textarea
               name="message"
               rows="5"
               placeholder="Your Message"
-              className="w-full px-4 py-3 bg-gray-800 rounded-xl border border-gray-700 focus:border-blue-500 outline-none transition resize-none"
+              className="w-full resize-none rounded-2xl border border-slate-800 bg-slate-900/70 px-4 py-3 text-slate-200 outline-none transition focus:border-cyan-500"
               required
             />
             <button
               type="submit"
               disabled={isLoading}
-              className={`w-full py-3 bg-linear-to-r from-blue-600 to-purple-600 rounded-xl font-bold hover:scale-105 transition shadow-lg shadow-blue-500/25 ${
-                isLoading ? "opacity-50 cursor-not-allowed" : ""
+              className={`w-full rounded-2xl bg-cyan-500 px-4 py-3 font-semibold text-slate-950 transition hover:bg-cyan-400 ${
+                isLoading ? "cursor-not-allowed opacity-60" : ""
               }`}
             >
               {isLoading ? "Sending..." : "Send Message"}

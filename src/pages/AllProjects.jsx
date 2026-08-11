@@ -10,7 +10,6 @@ import { projects } from "../data/portfolioData";
 function AllProjects() {
   const [activeFilter, setActiveFilter] = useState("all");
 
-  // Calculating the number of projects per category
   const counts = useMemo(() => {
     const all = projects.length;
     const htmlCss = projects.filter((p) => p.category === "html-css").length;
@@ -21,13 +20,11 @@ function AllProjects() {
     return { all, htmlCss, htmlCssJs, react };
   }, []);
 
-  // Filtering projects by the selected category
   const filteredProjects = useMemo(() => {
     if (activeFilter === "all") return projects;
     return projects.filter((p) => p.category === activeFilter);
   }, [activeFilter]);
 
-  // Defining the buttons and their count
   const filters = [
     { id: "all", label: "All", count: counts.all },
     { id: "html-css", label: "HTML & CSS", count: counts.htmlCss },
@@ -47,45 +44,39 @@ function AllProjects() {
         >
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition mb-4"
+            className="mb-4 inline-flex items-center gap-2 text-sm text-slate-400 transition hover:text-cyan-300"
           >
-            <FiArrowLeft className="animate-bounce" />
+            <FiArrowLeft />
             Return to Home
           </Link>
-          <h1 className="text-4xl md:text-5xl font-bold">
-            All{" "}
-            <span className="bg-linear-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-              projects
-            </span>
+          <h1 className="text-4xl md:text-5xl font-semibold text-white">
+            All <span className="text-cyan-400">projects</span>
           </h1>
-          <p className="text-gray-400 mt-2">
-            A comprehensive overview of my front-end development work.
+          <p className="mt-2 text-slate-400">
+            A curated view of my front-end work, from simple landing pages to
+            React-based applications.
           </p>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="flex flex-wrap gap-3 mb-10"
+          transition={{ delay: 0.1 }}
+          className="mb-10 flex flex-wrap gap-3"
         >
           {filters.map((filter) => (
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer ${
+              className={`cursor-pointer rounded-full px-5 py-2 text-sm font-medium transition-all duration-300 ${
                 activeFilter === filter.id
-                  ? "bg-linear-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25"
-                  : "bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white"
+                  ? "bg-cyan-500 text-slate-950"
+                  : "border border-slate-800 bg-slate-900/70 text-slate-300 hover:border-cyan-500/40 hover:text-cyan-300"
               }`}
             >
               {filter.label}
               <span
-                className={`ml-2 text-xs px-2 py-0.5 rounded-full ${
-                  activeFilter === filter.id
-                    ? "bg-white/20 text-white"
-                    : "bg-gray-700 text-gray-500"
-                }`}
+                className={`ml-2 rounded-full px-2 py-0.5 text-xs ${activeFilter === filter.id ? "bg-slate-950/20 text-slate-950" : "bg-slate-800 text-slate-400"}`}
               >
                 {filter.count}
               </span>
@@ -100,35 +91,37 @@ function AllProjects() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
           >
             {filteredProjects.length > 0 ? (
               filteredProjects.map((project, idx) => (
                 <motion.div
                   key={idx}
-                  initial={{ opacity: 0, scale: 0.9 }}
+                  initial={{ opacity: 0, scale: 0.96 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: idx * 0.05 }}
-                  whileHover={{ y: -8 }}
-                  className="bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-700 hover:border-blue-500 transition group"
+                  whileHover={{ y: -6, scale: 1.01 }}
+                  className="overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/70"
                 >
-                  <div className="h-48 bg-linear-to-br from-gray-700 to-gray-800 flex items-center justify-center text-7xl group-hover:scale-105 transition">
+                  <div className="h-48 bg-slate-800">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover"
+                      className="h-full w-full object-cover"
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                    <p className="text-gray-400 text-sm mb-4">
+                    <h3 className="mb-2 text-xl font-semibold text-white">
+                      {project.title}
+                    </h3>
+                    <p className="mb-4 text-sm leading-relaxed text-slate-400">
                       {project.description}
                     </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className="mb-4 flex flex-wrap gap-2">
                       {project.tech.map((tech, i) => (
                         <span
                           key={i}
-                          className="text-xs bg-gray-700 px-2 py-1 rounded-full"
+                          className="rounded-full border border-slate-700 bg-slate-800 px-2 py-1 text-xs text-slate-300"
                         >
                           {tech}
                         </span>
@@ -140,7 +133,7 @@ function AllProjects() {
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition"
+                          className="flex items-center gap-2 text-sm text-slate-400 transition hover:text-cyan-300"
                         >
                           <FiGithub /> code
                         </a>
@@ -150,7 +143,7 @@ function AllProjects() {
                           href={project.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition"
+                          className="flex items-center gap-2 text-sm text-slate-400 transition hover:text-cyan-300"
                         >
                           <FiExternalLink /> preview
                         </a>
@@ -160,7 +153,7 @@ function AllProjects() {
                 </motion.div>
               ))
             ) : (
-              <div className="col-span-full text-center py-20 text-gray-500">
+              <div className="col-span-full py-20 text-center text-slate-500">
                 There are no projects in this category.
               </div>
             )}
