@@ -5,8 +5,91 @@
     <link rel="icon" type="image/svg+xml" href="/code.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mohamed Abdalla || Developer</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+        background: #020617;
+        color: #f8fafc;
+      }
+
+      body {
+        font-family: "DM Sans", sans-serif;
+      }
+
+      #root {
+        min-height: 100%;
+      }
+
+      #app-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+        color: #f8fafc;
+        transition:
+          opacity 0.35s ease,
+          visibility 0.35s ease;
+      }
+
+      #app-loader.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      #app-loader .app-loader__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.5rem 2rem;
+        border: 1px solid rgba(34, 211, 238, 0.2);
+        border-radius: 999px;
+        background: rgba(2, 6, 23, 0.85);
+        box-shadow: 0 20px 50px rgba(2, 6, 23, 0.4);
+      }
+
+      #app-loader .app-loader__ring {
+        width: 42px;
+        height: 42px;
+        border: 3px solid rgba(34, 211, 238, 0.2);
+        border-top-color: #22d3ee;
+        border-radius: 50%;
+        animation: spin 0.9s linear infinite;
+      }
+
+      #app-loader .app-loader__text {
+        margin: 0;
+        font-size: 0.95rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #cbd5e1;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
+    <div
+      id="app-loader"
+      class="app-loader"
+      aria-live="polite"
+      aria-label="Loading portfolio"
+    >
+      <div class="app-loader__card">
+        <div class="app-loader__ring"></div>
+        <p class="app-loader__text">Loading portfolio...</p>
+      </div>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
