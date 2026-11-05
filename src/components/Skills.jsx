@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaReact, FaCss3Alt, FaJs, FaGitAlt } from "react-icons/fa";
-import { SiTailwindcss, SiHtml5, SiGithub, SiPostgresql } from "react-icons/si";
+import { SiTailwindcss, SiHtml5, SiGithub, SiPostgresql, SiTypescript } from "react-icons/si";
 import { RiSupabaseFill } from "react-icons/ri";
 
 const skills = [
@@ -18,6 +18,11 @@ const skills = [
     name: "JavaScript",
     icon: <FaJs className="text-yellow-400" />,
     description: "Interactive behavior and user-focused logic.",
+  },
+  {
+    name: "TypeScript",
+    icon: <SiTypescript className="text-blue-500" />,
+    description: "Strong typing for more robust and maintainable code.",
   },
   {
     name: "React.js",
@@ -43,11 +48,6 @@ const skills = [
     name: "Supabase",
     icon: <RiSupabaseFill className="text-green-400" />,
     description: "Simple backend services and data handling.",
-  },
-  {
-    name: "PostgreSQL",
-    icon: <SiPostgresql className="text-blue-500" />,
-    description: "Structured data for reliable applications.",
   },
 ];
 

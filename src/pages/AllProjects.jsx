@@ -27,9 +27,9 @@ function AllProjects() {
 
   const filters = [
     { id: "all", label: "All", count: counts.all },
-    { id: "html-css", label: "HTML & CSS", count: counts.htmlCss },
     { id: "html-css-js", label: "HTML & CSS & JS", count: counts.htmlCssJs },
-    { id: "react.js", label: "React.js", count: counts.react },
+    { id: "react.js", label: "React & JavaScript", count: counts.htmlCss },
+    { id: "react.ts", label: "React & TypeScript", count: counts.react },
   ];
 
   return (

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import { personalInfo, stats } from "../data/portfolioData";
+import { personalInfo } from "../data/portfolioData";
 
 function Hero() {
   return (
@@ -31,9 +31,9 @@ function Hero() {
           <div className="text-base text-slate-300 sm:text-lg">
             <TypeAnimation
               sequence={[
-                "Frontend Developer",
+                "Frontend Web Developer",
                 1800,
-                "React & Tailwind",
+                "React & JavaScript & TypeScript",
                 1800,
                 "UI-focused builds",
                 1800,
@@ -62,19 +62,6 @@ function Hero() {
             >
               Let's talk
             </a>
-          </div>
-          <div className="grid sm:grid-cols-2 gap-3 pt-2 max-w-lg">
-            {stats.map((item, index) => (
-              <div
-                key={index}
-                className="rounded-2xl border border-slate-800 bg-slate-900/70 px-4 py-4"
-              >
-                <p className="text-2xl font-semibold text-cyan-400">
-                  {item.number}
-                </p>
-                <p className="text-sm text-slate-400">{item.label}</p>
-              </div>
-            ))}
           </div>
         </motion.div>
 

@@ -24,7 +24,7 @@ function Projects() {
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects
-          .filter((_, idx) => idx < 6)
+          .filter((_, idx) => idx < 3)
           .map((project, idx) => (
             <ProjectCard key={idx} project={project} index={idx} />
           ))}

@@ -11,7 +11,7 @@ function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-slate-950/80 backdrop-blur-xl z-50 border-b border-slate-800/80 overflow-x-hidden">
-      <div className="max-w-6xl mx-auto max-md:px-4 py-4 flex justify-between items-center">
+      <div className="max-w-6xl mx-auto max-lg:px-6 py-4 flex justify-between items-center">
         <a
           href="/#home"
           className="text-xl font-semibold tracking-tight whitespace-nowrap"
